@@ -1,46 +1,47 @@
 ---
 import InfoItem from "./InfoItem.astro";
 import { InfoItemData } from "./InfoItem.astro";
-import Section from "./Section.astro"
+import Section from "./Section.astro";
 
 const defunctProjects: InfoItemData[] = [
   {
-    title: "Rotenium",
-    description: "E-Commerce platform to sell digital assets with various payment methods.",
-    from: "2018",
-    url: "https://image.ibb.co/drnWUe/Rotenium.png"
+    title: "chessTR",
+    description:
+      "A multiplayer chess game project of my own design, editing and development",
+    from: "2022",
+    url: "https://github.com/onuranl/chessTR",
   },
   {
-    title: "AnonimSor",
-    description: "A social media application for asking anonymous questions to others." ,
-    from: "2017",
+    title: "Penelope",
+    description: "Youtube video downloader",
+    from: "2023",
+    url: "https://github.com/onuranl/penelope",
   },
   {
-    title: "CarryWeb",
-    description: "Minecraft server management panel to control users, sell in-game products.",
-    from: "2017",
-    url: "https://i.ibb.co/41MQmbV/image.png"
+    title: "Vue Plugin",
+    description: "Simple loading screen for the vue developers",
+    from: "2022",
+    url: "https://github.com/onuranl/vue-loading-plugin",
   },
-] 
+];
 ---
 
-<Section title="Defunct/Closed Projects">
+<Section title="Open Source Projects">
   <div class="defunct-row">
     {defunctProjects.map((item) => <InfoItem data={item} />)}
   </div>
 </Section>
 
 <style>
-.defunct-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-
-  
-@media (max-width: 768px) {
   .defunct-row {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
-}
+
+  @media (max-width: 768px) {
+    .defunct-row {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>

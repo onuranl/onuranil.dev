@@ -4,25 +4,22 @@ import Section from "./Section.astro";
 
 const list: InfoItemData[] = [
   {
-    title: "National Technical University 'Kharkiv Polytechnic Institute'",
-    description: "Bachelor's degree, Software Engineering",
-    from: "2020",
-    to: "~",
-    url: "https://www.kpi.kharkov.ua/eng"
-
+    title: "Beykent University",
+    description: "Bachelor's degree, Computer Engineering",
+    from: "2019 (English preparation) - ",
+    to: "2024",
+    url: "https://lisansustu.beykent.edu.tr/en",
   },
   {
-    title: "Manavgat Vocational and Technical Anatolian High School",
-    description: "Information Technologies", 
-    url: "https://fdemir.dev",
-    from: "2015",
-    to: "2019"
-  }
-]
+    title: "Fen Bilimleri College",
+    description: "High school on science and mathematics",
+    url: "https://www.izmirfbk.com/lise",
+    from: "2015 - ",
+    to: "2019",
+  },
+];
 ---
 
 <Section title="Education">
-  {list.map((item) => (
-    <InfoItem data={item} />
-  ))}
+  {list.map((item) => <InfoItem data={item} />)}
 </Section>

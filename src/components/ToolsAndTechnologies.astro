@@ -1,68 +1,85 @@
 ---
-import Section from "./Section.astro"
-import { Image } from '@astrojs/image/components';
+import Section from "./Section.astro";
+import { Image } from "astro:assets";
 
-const Skills = [
+const skills = [
   {
-    image: '/img/typescript.png',
-    name: 'TypeScript',
+    image: "/img/typescript.png",
+    name: "TypeScript",
   },
   {
-    image: '/img/javascript.png',
-    name: 'JavaScript',
+    image: "/img/javascript.png",
+    name: "JavaScript",
   },
   {
-    image: '/img/react.png',
-    name: 'React',
+    image: "/img/react.png",
+    name: "React",
   },
   {
-    image: '/img/next.png',
-    name: 'Next.js',
+    image: "/img/next.png",
+    name: "Next.js",
   },
   {
-    image: '/img/cypress.png',
-    name: 'Cypress',
+    image: "/img/vue.png",
+    name: "Vue",
   },
   {
-    image: '/img/openlayers.png',
-    name: 'Openlayers',
+    image: "/img/nuxt.png",
+    name: "Nuxt.js",
   },
   {
-    image: '/img/leaflet.png',
-    name: 'Leaflet',
+    image: "/img/expo.png",
+    name: "Expo",
   },
   {
-    image: '/img/sass.png',
-    name: 'Sass',
+    image: "/img/electron.png",
+    name: "Electron",
   },
   {
-    image: '/img/html5.png',
-    name: 'HTML5',
+    image: "/img/git.png",
+    name: "Git",
   },
   {
-    image: '/img/nodejs.png',
-    name: 'Node.js',
+    image: "/img/sass.png",
+    name: "Sass",
   },
   {
-    image: '/img/tailwindcss.png',
-    name: 'Tailwindcss',
+    image: "/img/html5.png",
+    name: "HTML5",
   },
   {
-    image: '/img/figma.png',
-    name: 'Figma',
-  }
-]
-
+    image: "/img/nodejs.png",
+    name: "Node.js",
+  },
+  {
+    image: "/img/tailwindcss.png",
+    name: "Tailwindcss",
+  },
+  {
+    image: "/img/figma.png",
+    name: "Figma",
+  },
+  {
+    image: "/img/openlayers.png",
+    name: "Openlayers",
+  },
+  {
+    image: "/img/leaflet.png",
+    name: "Leaflet",
+  },
+];
 ---
 
 <Section title="Tools & Technologies">
   <div class="skills-row">
-    {Skills.map((skill) => (
-      <div class="item">
-        <Image src={skill.image} alt={skill.name} width={24} height={24} />
-        <span>{skill.name}</span>
-      </div>
-    ))}
+    {
+      skills.map((skill) => (
+        <div class="item">
+          <Image src={skill.image} alt={skill.name} width={24} height={24} />
+          <span>{skill.name}</span>
+        </div>
+      ))
+    }
   </div>
 </Section>
 
@@ -100,10 +117,9 @@ const Skills = [
     justify-content: start;
     border: 1px solid #ccc;
     border-radius: 0.5rem;
-    margin: 0.5rem;
     color: var(--color-secondary);
-    height: 62px;
     user-select: none;
+    padding: 10px;
   }
 
   .item:hover {
@@ -111,6 +127,6 @@ const Skills = [
   }
 
   .item img {
-    margin: 0 14px;
+    margin-right: 10px;
   }
 </style>

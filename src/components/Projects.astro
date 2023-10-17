@@ -5,23 +5,38 @@ import Section from "./Section.astro";
 export type Project = {
   image: string;
   title: string;
-  description: string
-  link: string
-}
+  description: string;
+  link: string;
+};
 
 const projects: Project[] = [
   {
-    image: 'https://png.pngtree.com/thumb_back/fh260/back_our/20190628/ourmid/pngtree-high-saturated-beautiful-romantic-dynamic-watercolor-solid-color-colorful-gradient-background-image_275535.jpg',
-    title: 'React-Redux-Todo-App',
-    description: 'A todo app built with React and Redux',
-    link: 'dsadsa.com'
-  }
-]
+    image: "img/adivinalo.png",
+    title: "Adivínalo",
+    description: "A football prediction game made with react native",
+    link: "https://play.google.com/store/apps/details?id=com.makinaonr.guessit",
+  },
+  {
+    image: "img/nazende.png",
+    title: "Asr-ı Nazende",
+    description:
+      "An application made with React Native, where customers can examine, choose wedding dresses and reach the seller easily and effectively.",
+    link: "https://play.google.com/store/apps/details?id=com.onuranil.asrinazende",
+  },
+  {
+    image:
+      "https://png.pngtree.com/thumb_back/fh260/back_our/20190628/ourmid/pngtree-high-saturated-beautiful-romantic-dynamic-watercolor-solid-color-colorful-gradient-background-image_275535.jpg",
+    title: "Electrip",
+    description:
+      "Electric charging solutions for individual and corporate use ",
+    link: "https://electripglobal.com/",
+  },
+];
 ---
 
 <Section title="Projects">
   <div class="project-row">
-    {projects.map((item) => <ProjectItem data={item} />)}
+    {projects.map((item) => <ProjectItem data={item} />)}
   </div>
 </Section>
 

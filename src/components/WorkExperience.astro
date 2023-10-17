@@ -12,40 +12,40 @@ type Experience = {
 
 const experinces: Experience[] = [
   {
-    company: "Getir",
-    title: "Frontend Engineer",
-    from: "Nov 2022",
+    company: "nutima",
+    title: "Frontend Developer",
+    from: "Feb 2022",
+    to: "Feb 2023",
+    description:
+      "I mostly worked as a front-end developer with Vue.js in the “Dukkan Senin” project with Pepsi and developed a project with my team using technologies such as Storybook and Strapi as side projects.",
+    url: "https://nutimacode.com/",
+  },
+  {
+    company: "Manim Finans",
+    title: "Software Developer",
+    from: "Dec 2021",
+    to: "Feb 2022",
+    description:
+      "I adapted to an ongoing project with Angular.js and Node.js in a brief time and contributed to the development process.",
+    url: "https://www.manim.com.tr/en/",
+  },
+  {
+    company: "Rakamon Medya",
+    title: "Frontend Developer",
+    from: "Jun 2021",
+    to: "Dec 2021",
+    description:
+      "The main theme of which brings the freelancer and the employer together, and then I developed the front side myself using with Nuxt.js and supported the back side using Node.js.",
+    url: "http://www.rakamonmedya.com.tr/",
+  },
+  {
+    company: "Freelancer",
+    title: "Software Developer",
+    from: "Oct 2019",
     to: "Present",
     description:
-      "Part of the GetirLocals that works with a startup mindset and a strong collaborative culture with a lot of peer-programming. from adding new features and big replatforming projects to launching entire new products.",
-    url: "https://getir.com",
-  },
-  {
-    company: "Kiwi Mobility",
-    title: "Frontend Developer",
-    from: "Sep 2021",
-    to: "Oct 2022",
-    description:
-      "Created back-office management web application for Kiwi Mobility. The application is used by the company's operation team to manage and track vehicles around the world.",
-    url: "https://ride.kiwi",
-  },
-  {
-    company: "Otokirala",
-    title: "Frontend Developer",
-    from: "Sep 2019",
-    to: "Mar 2020",
-    description:
-      "Built the SEO-friendly, server-side rendered web application for Otokirala. The application allows users to rent a car.",
-    url: "https://otokirala.com",
-  },
-  {
-    company: "Antverse",
-    title: "Software Developer Intern",
-    from: "Mar 2019",
-    to: "Sep 2019",
-    description:
-      "Contributed to web applications. Did research and development of file-system sync, React Native, and application component structure.",
-    url: "https://fdemir.dev",
+      "Builded and contributed to web, mobile, desktop applications for clients and projects of mine.",
+    url: "https://onuranil.dev",
   },
 ];
 ---
@@ -59,6 +59,7 @@ const experinces: Experience[] = [
             <a href={item.url} target="_blank">
               {item.company}
             </a>
+            <small>{item.title}</small>
             <small>
               {item.from} - {item.to}
             </small>
@@ -70,7 +71,11 @@ const experinces: Experience[] = [
   </ul>
 </Section>
 
-<style>
+<style scoped>
+  ul {
+    padding-left: 0px;
+  }
+
   p {
     color: var(--color-secondary);
     line-height: 24px;
